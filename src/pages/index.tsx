@@ -1,4 +1,4 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Link } from "@chakra-ui/react";
 import { Layout } from "../components/Layout";
 
 const Index = () => (
@@ -12,11 +12,9 @@ const Index = () => (
       ]}
       gap={6}
     >
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
-      <GridItem w="100%" h="10" bg="blue.500" />
+      <GridItem>
+        <Link href="/json-viewer">JSON VIEWER</Link>
+      </GridItem>
     </Grid>
   </Layout>
 );
