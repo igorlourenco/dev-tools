@@ -12,7 +12,7 @@ import { Layout } from "../components/Layout";
 import { isJson } from "../utils/isJson";
 const ReactJson = dynamic(() => import("react-json-view"), { ssr: false });
 
-const JsonViewer = () => {
+const JsonViewerPage = () => {
   const { colorMode } = useColorMode();
   const [jsonToParse, setJsonToParse] = useState<object>({});
   const [jsonStringHasError, setJsonStringHasError] = useState<boolean>(false);
@@ -84,4 +84,4 @@ const JsonViewer = () => {
   );
 };
 
-export default JsonViewer;
+export default JsonViewerPage;
