@@ -1,14 +1,16 @@
-import { Box, BoxProps, Flex } from "@chakra-ui/react";
+import { Box, BoxProps, Flex, Stack } from "@chakra-ui/react";
 import { ColorModeSwitcher } from "./ColorModeSwitcher";
 
 export const Layout = ({ children, ...props }: BoxProps) => {
   return (
-    <Box width="100vw" {...props}>
-      <Flex direction="column">
-        <Flex p={4}>
+    <Box width="100%" maxWidth="100vw" {...props}>
+      <Flex direction="column" maxWidth="100vw">
+        <Flex py={4} px={16}>
           <ColorModeSwitcher />
         </Flex>
-        <Box p={16}>{children}</Box>
+        <Stack p={16} spacing={4}>
+          {children}
+        </Stack>
       </Flex>
     </Box>
   );
